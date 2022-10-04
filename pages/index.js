@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import Heading from '../components/Heading';
-import Search from "../components/Search"
-
+import Search from '../components/Search';
+import Results from '../components/Results';
 
 export default function Home() {
   return (
@@ -17,6 +17,7 @@ export default function Home() {
           <Header />
           <Heading />
           <Search />
+          <Results />
         </div>
       </section>
       <footer></footer>
