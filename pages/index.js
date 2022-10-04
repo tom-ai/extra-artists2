@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="min-h-screen bg-yellow-300 pt-16">
-        <div className="container mx-auto p-8 md:grid md:grid-cols-2">
+        <div className="container mx-auto p-8 md:grid md:grid-cols-2 md:gap-6">
           <div className="">
             <Header />
           </div>
