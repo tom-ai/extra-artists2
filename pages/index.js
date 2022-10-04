@@ -16,7 +16,6 @@ export default function Home() {
           <Search />
         </div>
       </section>
-
       <footer></footer>
     </div>
   );
