@@ -2,7 +2,7 @@ import Link from 'next';
 
 const DiscogsLink = () => {
   return (
-    <>
+    <div>
       <h2 className="text-2xl font-bold">1. Get Song ID</h2>
       <p className="text-lg">Find a song on Discogs and copy the ID</p>
       <a
@@ -11,7 +11,7 @@ const DiscogsLink = () => {
       >
         https://www.discogs.com/
       </a>
-    </>
+    </div>
   );
 };
 

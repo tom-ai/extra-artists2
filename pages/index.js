@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="min-h-screen bg-yellow-300">
-        <div className="container mx-auto p-8">
+        <div className="container mx-auto space-y-16 p-8">
           <Header />
           <DiscogsLink />
           <Search />
