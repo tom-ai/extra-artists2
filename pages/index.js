@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Header from '../components/Header';
-import DiscogsLink from '../components/DiscogsLink';
-import Search from '../components/Search';
-import Results from '../components/Results';
+import DiscogsLink from '../components/App/components/DiscogsLink';
+import Search from '../components/App/components/Search';
+import Results from '../components/App/components/Results';
+import App from '../components/App/App';
 
 export default function Home() {
   return (
@@ -17,11 +18,7 @@ export default function Home() {
           <div className="">
             <Header />
           </div>
-          <div className="space-y-16 ">
-            <DiscogsLink />
-            <Search />
-            <Results />
-          </div>
+          <App />
         </div>
       </section>
     </div>
