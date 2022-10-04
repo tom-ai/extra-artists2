@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Header from '../components/Header';
-import Heading from '../components/Heading';
+import DiscogsLink from '../components/DiscogsLink';
 import Search from '../components/Search';
 import Results from '../components/Results';
 
@@ -15,12 +15,11 @@ export default function Home() {
       <section className="min-h-screen bg-yellow-300">
         <div className="container mx-auto p-8">
           <Header />
-          <Heading />
+          <DiscogsLink />
           <Search />
           <Results />
         </div>
       </section>
-      <footer></footer>
     </div>
   );
 }

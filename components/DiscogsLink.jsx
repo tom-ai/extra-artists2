@@ -1,6 +1,6 @@
 import Link from 'next';
 
-const Heading = () => {
+const DiscogsLink = () => {
   return (
     <>
       <h2 className="text-2xl font-bold">1. Get Song ID</h2>
@@ -15,4 +15,4 @@ const Heading = () => {
   );
 };
 
-export default Heading;
+export default DiscogsLink;
