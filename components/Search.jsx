@@ -1,6 +1,6 @@
 const Search = () => {
   return (
-    <>
+    <div>
       <h2 className="text-2xl font-bold">2. Search the database</h2>
       <p className="text-lg">Paste in song ID and search</p>
       <form className="flex flex-col">
@@ -17,7 +17,7 @@ const Search = () => {
           Find
         </button>
       </form>
-    </>
+    </div>
   );
 };
 

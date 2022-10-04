@@ -12,12 +12,16 @@ export default function Home() {
         <meta name="description" content="Find the extra artists" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="min-h-screen bg-yellow-300">
-        <div className="container mx-auto p-8">
-          <Header />
-          <DiscogsLink />
-          <Search />
-          <Results />
+      <section className="min-h-screen bg-yellow-300 pt-16">
+        <div className="container mx-auto p-8 md:grid md:grid-cols-2 md:gap-6">
+          <div className="">
+            <Header />
+          </div>
+          <div className="space-y-16 ">
+            <DiscogsLink />
+            <Search />
+            <Results />
+          </div>
         </div>
       </section>
     </div>
