@@ -1,4 +1,9 @@
-const Form = ({ textInput, setTextInput }) => {
+import { useState } from 'react';
+
+const Form = () => {
+  const [textInput, setTextInput] = useState(''); // song ID
+  const [status, setStatus] = useState();
+
   const handleChange = (e) => {
     setTextInput(e.target.value);
   };
