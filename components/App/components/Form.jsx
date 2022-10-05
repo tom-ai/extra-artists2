@@ -1,12 +1,18 @@
-const Search = ({ textInput, setTextInput }) => {
-  const handleChange = (event) => {
-    setTextInput(event.target.value);
+const Form = ({ textInput, setTextInput }) => {
+  const handleChange = (e) => {
+    setTextInput(e.target.value);
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(textInput);
+  };
+
   return (
     <div>
       <h2 className="text-2xl font-bold">2. Search the database</h2>
       <p className="text-lg">Paste in song ID and search</p>
-      <form className="flex flex-col">
+      <form className="flex flex-col" onSubmit={handleSubmit}>
         <label className="invisible -mb-5" for="search-box">
           Paste song ID
         </label>
@@ -26,4 +32,4 @@ const Search = ({ textInput, setTextInput }) => {
   );
 };
 
-export default Search;
+export default Form;

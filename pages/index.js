@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import DiscogsLink from '../components/App/components/DiscogsLink';
-import Search from '../components/App/components/Search';
+import Search from '../components/App/components/Form';
 import Results from '../components/App/components/Results';
 import App from '../components/App/App';
 
