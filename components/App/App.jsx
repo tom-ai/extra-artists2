@@ -4,7 +4,10 @@ import Results from './components/Results';
 import { useState } from 'react';
 
 const App = () => {
-  const [textInput, setTextInput] = useState('');
+  const [textInput, setTextInput] = useState(''); // song ID
+
+  // make API call
+  // hydrate a component to display the data (list)
 
   return (
     <div className="space-y-16 ">
