@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import * as api from '../../../utils/api';
 
 const Form = () => {
   const [textInput, setTextInput] = useState(''); // song ID
-  const [status, setStatus] = useState();
 
   const handleChange = (e) => {
     setTextInput(e.target.value);
@@ -10,7 +10,10 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(textInput);
+    // make API call
+    api.getBase().then((res) => {
+      console.log(res);
+    });
   };
 
   return (
