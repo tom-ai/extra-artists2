@@ -1,4 +1,7 @@
-const Search = () => {
+const Search = ({ textInput, setTextInput }) => {
+  const handleChange = (event) => {
+    setTextInput(event.target.value);
+  };
   return (
     <div>
       <h2 className="text-2xl font-bold">2. Search the database</h2>
@@ -8,6 +11,8 @@ const Search = () => {
           Paste song ID
         </label>
         <input
+          value={textInput}
+          onChange={handleChange}
           id="search-box"
           className="mb-2 p-2"
           type="text"
