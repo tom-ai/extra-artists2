@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import * as api from '../../../utils/api';
+import artistIsOnSongObject from '../../../utils/artistIsOnSongObject';
 
-const Form = ({ setArtists }) => {
+const Form = () => {
   const [textInput, setTextInput] = useState('3864735'); // song ID
+  const [release, setRelease] = useState({});
 
   const handleChange = (e) => {
     setTextInput(e.target.value);
@@ -12,9 +14,15 @@ const Form = ({ setArtists }) => {
     e.preventDefault();
     api
       .getReleaseByID(textInput)
-      .then(({ extraArtists }) => setArtists(extraArtists));
+      .then((data) => {
+        setRelease(data);
+      })
+      .then(() => {
+        artistIsOnSongObject(release);
+      });
   };
 
+  // console.log(release);
   return (
     <div>
       <h2 className="text-2xl font-bold">2. Search the database</h2>
