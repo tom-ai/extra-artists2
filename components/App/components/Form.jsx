@@ -7,7 +7,7 @@ import findExtraArtists from '../../../utils/findExtraArtists';
 
 const Form = () => {
   const [textInput, setTextInput] = useState('3864735'); // song ID
-  const [release, setRelease] = useState({});
+  const [extraArtists, setExtraArtists] = useState();
 
   const handleChange = (e) => {
     setTextInput(e.target.value);
@@ -15,9 +15,12 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    api.getReleaseByID(textInput).then((data) => {
-      findExtraArtists(data, 'sax');
-    });
+    api
+      .getReleaseByID(textInput)
+      .then((data) => {
+        setExtraArtists(findExtraArtists(data, 'sax'));
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
