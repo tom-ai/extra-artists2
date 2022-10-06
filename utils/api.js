@@ -24,5 +24,6 @@ export function getReleaseByID(songId) {
           url: resource_url,
         };
       }
-    );
+    )
+    .catch((err) => console.log(err));
 }
