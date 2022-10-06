@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import * as api from '../../../utils/api';
+import { useEffect } from 'react';
+
 import artistIsOnSongObject from '../../../utils/artistIsOnSongObject';
+import findExtraArtists from '../../../utils/findExtraArtists';
 
 const Form = () => {
   const [textInput, setTextInput] = useState('3864735'); // song ID
@@ -12,14 +15,9 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    api
-      .getReleaseByID(textInput)
-      .then((data) => {
-        setRelease(data);
-      })
-      .then(() => {
-        artistIsOnSongObject(release.extraArtists, 'sax');
-      });
+    api.getReleaseByID(textInput).then((data) => {
+      findExtraArtists(data, 'sax');
+    });
   };
 
   // console.log(release);
