@@ -18,7 +18,7 @@ const Form = () => {
         setRelease(data);
       })
       .then(() => {
-        artistIsOnSongObject(release);
+        artistIsOnSongObject(release.extraArtists);
       });
   };
 
