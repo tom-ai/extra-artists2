@@ -2,9 +2,11 @@
 // then when mapping out, the saxophone is in top level so map out top level
 
 const artistIsOnSongObject = (array, instrument) => {
-  const regex = `/${instrument}/i`;
+  const regex = '/sax/g';
   array.forEach((artist) => {
-    regex.test(artist.role) ? true : false;
+    if (regex.test(artist.role)) {
+      console.log('yes', artist.role);
+    }
   });
 };
 
