@@ -6,10 +6,10 @@ const artistIsOnSongObject = (array, instrument) => {
 
   const regex = /sax/i;
   array.forEach((artist) => {
-    console.log(artist.role, regex.test(artist.role));
-    // if (regex.test(artist.role)) {
-    //   console.log('yes sax');
-    // }
+    // console.log(artist.role, regex.test(artist.role));
+    if (regex.test(artist.role)) {
+      console.log('yes sax', artist.name);
+    }
   });
 
   // if role contains "saxophone"
