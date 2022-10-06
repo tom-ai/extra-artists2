@@ -20,7 +20,6 @@ const Form = () => {
     });
   };
 
-  // console.log(release);
   return (
     <div>
       <h2 className="text-2xl font-bold">2. Search the database</h2>
