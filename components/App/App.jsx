@@ -8,6 +8,7 @@ const App = () => {
   // hydrate a component to display the data (list)
   const [artists, setArtists] = useState([]);
 
+  console.log(artists);
   return (
     <div className="space-y-16 ">
       <DiscogsLink />
